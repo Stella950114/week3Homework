@@ -503,10 +503,13 @@ img{
         .social{
             .contact-mobile{
                 li{
-                    span,h3{display: inline;}
+                    span,h3{display: block;}
                 }
             }
             display: flex;
+            .brand{
+                display: none;
+            }
         }
 
         .contact-all{

@@ -478,7 +478,10 @@ img {
     display: flex;
   }
   .footer .social .contact-mobile li span, .footer .social .contact-mobile li h3 {
-    display: inline;
+    display: block;
+  }
+  .footer .social .brand {
+    display: none;
   }
   .footer .contact-all .contact li span {
     margin-right: 3%;
