@@ -63,6 +63,11 @@ img {
   padding: 12px;
 }
 
+@media (max-width: 375px) {
+  .container {
+    padding: 0;
+  }
+}
 .header {
   background-color: #AA0601;
 }
@@ -119,6 +124,8 @@ img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
   }
   .header .menu .logo {
     width: 100%;
@@ -133,6 +140,7 @@ img {
             justify-content: center;
     padding: 5px;
     margin-bottom: 20px;
+    margin-left: 40%;
   }
   .header .menu .menuList {
     -ms-flex-wrap: wrap;
@@ -185,6 +193,9 @@ img {
   .option li a {
     font-size: 24px;
   }
+  .option li a:hover {
+    border-bottom: 8px solid #AA0601;
+  }
   .option li .bl-none {
     border-left-style: none;
   }
@@ -193,9 +204,15 @@ img {
   }
 }
 @media (max-width: 375px) {
+  .option {
+    margin-top: 0;
+  }
   .option li a {
     font-size: 16px;
     padding: 9% 0;
+  }
+  .option li a:hover {
+    border-bottom: 8px solid #AA0601;
   }
 }
 
@@ -221,6 +238,9 @@ img {
   }
 }
 @media (max-width: 375px) {
+  .banner {
+    margin-top: 0px;
+  }
   .banner .banner-PC img {
     display: none;
   }
@@ -301,6 +321,9 @@ img {
   }
 }
 @media (max-width: 375px) {
+  .product .productList {
+    padding: 3%;
+  }
   .product .productList li {
     width: 100%;
   }
@@ -349,11 +372,13 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.footer .footerList .footer-left {
+  width: 70%;
+}
 .footer .footerList .list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 70%;
   gap: 3%;
 }
 .footer .footerList .list a {
@@ -364,6 +389,32 @@ img {
   font-family: "Noto Sans TC";
 }
 .footer .footerList .list a:hover {
+  opacity: 0.7;
+}
+.footer .footerList .contact {
+  border-bottom: 1px solid #FFFFFF;
+}
+.footer .footerList .contact li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Noto Sans TC,Regular";
+}
+.footer .footerList .contact li span {
+  margin-right: 1.6%;
+  color: white;
+  font-size: 36px;
+}
+.footer .footerList .contact li a {
+  text-decoration: none;
+  color: white;
+  font-size: 36px;
+  line-height: 54px;
+}
+.footer .footerList .contact li a:hover {
   opacity: 0.7;
 }
 .footer .footerList .social {
@@ -388,35 +439,6 @@ img {
   width: 100%;
 }
 .footer .footerList .brand li a:hover {
-  opacity: 0.7;
-}
-.footer .contact-all .brand-mobile {
-  display: none;
-}
-.footer .contact-all .contact {
-  border-bottom: 1px solid #FFFFFF;
-}
-.footer .contact-all .contact li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-family: "Noto Sans TC,Regular";
-}
-.footer .contact-all .contact li span {
-  margin-right: 1.6%;
-  color: white;
-  font-size: 36px;
-}
-.footer .contact-all .contact li a {
-  text-decoration: none;
-  color: white;
-  font-size: 36px;
-  line-height: 54px;
-}
-.footer .contact-all .contact li a:hover {
   opacity: 0.7;
 }
 .footer .copyright {
@@ -469,31 +491,29 @@ img {
   }
 }
 @media (max-width: 375px) {
+  .footer {
+    padding-bottom: 24px;
+  }
   .footer .footerList .list {
     display: none;
   }
-  .footer .social {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .footer .footerList .contact {
+    padding-bottom: 24px;
   }
-  .footer .social .contact-mobile li span, .footer .social .contact-mobile li h3 {
-    display: block;
-  }
-  .footer .social .brand {
-    display: none;
-  }
-  .footer .contact-all .contact li span {
+  .footer .footerList .contact li span {
     margin-right: 3%;
     color: white;
     font-size: 20px;
   }
-  .footer .contact-all .contact li a {
+  .footer .footerList .contact li a {
     font-size: 16px;
     line-height: 24px;
   }
-  .footer .contact-all .brand-mobile li a img {
-    display: block;
+  .footer .footerList .brand {
+    width: 100%;
+  }
+  .footer .footerList .brand img {
+    width: 100%;
   }
   .footer .copyright {
     display: block;
